@@ -1,0 +1,13 @@
+.spa-component-progress-bar {
+    box-sizing: border-box;
+    height: 24px;
+    background-color: grey;
+    outline: 1px dashed #005000;
+    outline-offset: -1px; }
+    .spa-component-progress-bar.hidden {
+        display: none; }
+    .spa-component-progress-bar .value {
+        height: 100%;
+        background-color: orange; }
+    .spa-component-progress-bar.focus {
+        outline: 1px dashed red; }

@@ -1,0 +1,36 @@
+{
+    "name": "spa-component-progress-bar",
+    "version": "1.0.0",
+    "description": "Base progress bar implementation.",
+    "author": {
+        "name": "Stanislav Kalashnik",
+        "email": "darkpark.main@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/spasdk/component-progress-bar.git"
+    },
+    "scripts": {
+        "sass": "node-sass --indent-width 4 --include-path ../../.. sass/develop.scss css/develop.css && node-sass --indent-width 4 --include-path ../../.. sass/release.scss css/release.css",
+        "lint": "eslint .",
+        "test": "npm run lint",
+        "jsdoc": "jsdoc --destination doc *.js readme.md"
+    },
+    "dependencies": {
+        "spa-component": "spasdk/component"
+    },
+    "devDependencies": {
+        "eslint": "3.*.*",
+        "spa-eslint-config": "spasdk/eslint-config"
+    },
+    "keywords": [
+        "spa",
+        "spasdk",
+        "framework",
+        "visual",
+        "component",
+        "progress",
+        "bar"
+    ],
+    "license": "MIT"
+}

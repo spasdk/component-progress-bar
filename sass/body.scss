@@ -1,0 +1,12 @@
+// @license The MIT License (MIT)
+// @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
+
+@mixin spa-component-progress-bar {
+    height:           $progressBarHeight;
+    background-color: grey;
+
+    .value {
+        height:           100%;
+        background-color: orange;
+    }
+}
