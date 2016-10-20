@@ -1,9 +1,10 @@
 Progress bar component
 ======================
 
-[![Build Status](https://img.shields.io/travis/spasdk/component-progress-bar.svg?style=flat-square)](https://travis-ci.org/spasdk/component-progress-bar)
-[![NPM version](https://img.shields.io/npm/v/spa-component-progress-bar.svg?style=flat-square)](https://www.npmjs.com/package/spa-component-progress-bar)
-[![Dependencies Status](https://img.shields.io/david/spasdk/component-progress-bar.svg?style=flat-square)](https://david-dm.org/spasdk/component-progress-bar)
+[![build status](https://img.shields.io/travis/spasdk/component-progress-bar.svg?style=flat-square)](https://travis-ci.org/spasdk/component-progress-bar)
+[![npm version](https://img.shields.io/npm/v/spa-component-progress-bar.svg?style=flat-square)](https://www.npmjs.com/package/spa-component-progress-bar)
+[![dependencies status](https://img.shields.io/david/spasdk/component-progress-bar.svg?style=flat-square)](https://david-dm.org/spasdk/component-progress-bar)
+[![devDependencies status](https://img.shields.io/david/dev/spasdk/component-progress-bar.svg?style=flat-square)](https://david-dm.org/spasdk/component-progress-bar?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/spasdk)
 
 
