@@ -26,9 +26,13 @@ function ProgressBar ( config ) {
     config = config || {};
 
     if ( DEVELOP ) {
-        if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
+        if ( typeof config !== 'object' ) {
+            throw new Error(__filename + ': wrong config type');
+        }
         // init parameters checks
-        if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
+        if ( 'className' in config && (!config.className || typeof config.className !== 'string') ) {
+            throw new Error(__filename + ': wrong or empty config.className');
+        }
     }
 
     /**
@@ -101,8 +105,12 @@ ProgressBar.prototype.set = function ( value ) {
     var prevValue = this.value;
 
     if ( DEVELOP ) {
-        if ( arguments.length !== 1  ) { throw new Error(__filename + ': wrong arguments number'); }
-        if ( Number(value) !== value ) { throw new Error(__filename + ': value must be a number'); }
+        if ( arguments.length !== 1 ) {
+            throw new Error(__filename + ': wrong arguments number');
+        }
+        if ( Number(value) !== value ) {
+            throw new Error(__filename + ': value must be a number');
+        }
     }
 
     // value changed but in the given range
@@ -157,14 +165,20 @@ ProgressBar.prototype.set = function ( value ) {
  */
 ProgressBar.prototype.init = function ( config ) {
     if ( DEVELOP ) {
-        if ( arguments.length !== 1 ) { throw new Error(__filename + ': wrong arguments number'); }
-        if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
+        if ( arguments.length !== 1 ) {
+            throw new Error(__filename + ': wrong arguments number');
+        }
+        if ( typeof config !== 'object' ) {
+            throw new Error(__filename + ': wrong config type');
+        }
     }
 
     // set max progress value
     if ( config.max !== undefined ) {
         if ( DEVELOP ) {
-            if ( Number(config.max) !== config.max ) { throw new Error(__filename + ': config.max value must be a number'); }
+            if ( Number(config.max) !== config.max ) {
+                throw new Error(__filename + ': config.max value must be a number');
+            }
         }
 
         // apply
@@ -174,7 +188,9 @@ ProgressBar.prototype.init = function ( config ) {
     // set min progress value
     if ( config.min !== undefined ) {
         if ( DEVELOP ) {
-            if ( Number(config.min) !== config.min ) { throw new Error(__filename + ': config.min value must be a number'); }
+            if ( Number(config.min) !== config.min ) {
+                throw new Error(__filename + ': config.min value must be a number');
+            }
         }
 
         // apply
@@ -182,15 +198,23 @@ ProgressBar.prototype.init = function ( config ) {
     }
 
     if ( DEVELOP ) {
-        if ( this.min >= this.max ) { throw new Error(__filename + ': this.min value must be less than this.max'); }
+        if ( this.min >= this.max ) {
+            throw new Error(__filename + ': this.min value must be less than this.max');
+        }
     }
 
     // set actual progress value
     if ( config.value !== undefined ) {
         if ( DEVELOP ) {
-            if ( Number(config.value) !== config.value ) { throw new Error(__filename + ': config.value must be a number'); }
-            if ( config.value > this.max ) { throw new Error(__filename + ': config.value more than config.maximum'); }
-            if ( config.value < this.min ) { throw new Error(__filename + ': config.value less than config.minimum'); }
+            if ( Number(config.value) !== config.value ) {
+                throw new Error(__filename + ': config.value must be a number');
+            }
+            if ( config.value > this.max ) {
+                throw new Error(__filename + ': config.value more than config.maximum');
+            }
+            if ( config.value < this.min ) {
+                throw new Error(__filename + ': config.value less than config.minimum');
+            }
         }
 
         // apply
